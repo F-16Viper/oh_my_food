@@ -1,0 +1,165 @@
+@import "_.mixins.scss";
+@import "_.menu.scss";
+@import "_.footer.scss";
+@import "_.restau1.scss";
+
+
+.logo {
+    margin-top: 25px;
+    @include FlexCenter;
+}
+
+html, body {
+    font-family: 'Raleway', sans-serif;
+    max-width: 100%; 
+    overflow-x: hidden;
+    margin: 0;
+}
+
+main {
+   padding: 0 6rem;
+   
+    @media (max-width: 1000px) {
+        padding: 0 1rem;
+    }
+}
+
+h2 {
+    padding: 0 2rem;
+    margin: 0;
+}
+
+.logo {
+    margin-top: 25px;
+    @include FlexCenter;
+}
+
+.parent {
+    margin-top: 25px;
+    box-shadow: 0 0 6px 0 black;
+    background-color: rgba(233, 228, 228, 0.843); 
+    width: 100%;
+    @include FlexCenter;
+    margin-right: 25px;
+    &--icon {
+        margin-right: 25px;
+        width: 30px;
+        height: 30px;
+        @include FlexCenter;
+    }
+    &--texte {
+       font-size: 17px;
+    }
+}
+
+.navigation {
+
+    text-align: center;
+
+    h2 {
+        
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    button {
+        color: white;
+        font-weight: 400;
+        margin-left: 26px;
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 2rem;
+        @include shadow;
+        background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+        transition: transform 200ms;
+        @media (max-width: 890px) {
+            margin-left: 10px;
+        }
+
+        &:hover {
+            transform: scale(1.02);
+            opacity: 0.9;
+        }
+    }
+}
+
+.Choice {
+    margin-top: 50px;
+    counter-reset: steps;
+  
+    
+    & h2 {
+        padding-left: 25px;
+    }
+
+    & ol {
+        
+        margin-top: 50px;
+        display: flex;
+        gap: 22px;
+        flex-wrap: wrap;
+        padding-left: 1.8em;
+        padding-right: 0.8em;
+    }
+
+    & li {
+        position: relative;
+        transition: all 200ms;
+        &:hover {
+            transform: scale(1.02);
+            opacity: 0.9;
+            
+        }
+        &::before {
+            content: counter(steps);
+            counter-increment: steps;
+            color: white;
+            background-color: rgb(153, 13, 208);
+            width: 2rem;
+            height: 2rem;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: -1.2rem;
+            transform: translateY(-50%);
+        }
+        padding: 1rem 2rem;
+        background-color: #f6f6f6;
+        border: 4px solid #efefef;
+        border-radius: 1rem;
+        flex-grow: 1;
+        box-shadow: 0 0 3px 0 rgb(160, 157, 157);
+
+        & i {
+            color: rgb(144, 143, 143);
+            margin-right: 20px;
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.loader {
+    background-color: #ffffff;
+    @include FlexCenter;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0.9;
+    animation: loader 200ms 3s forwards;
+    animation-fill-mode: forwards;
+}

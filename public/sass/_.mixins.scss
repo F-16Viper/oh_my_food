@@ -1,0 +1,57 @@
+@mixin FlexCenter {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+@mixin FlexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin FlexArround {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin shadow {
+    box-shadow: 2px 1px 8px -3px #000000;
+}
+
+@mixin gradient($opacity) {
+    background-image: linear-gradient(to top, rgba(147, 86, 220, $opacity), rgba(255, 121, 218, $opacity));
+
+}
+
+@mixin icon {
+    position: absolute;
+    left: 2.5rem;
+    top: 0;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    font-size: 1.5rem;
+}
+
+@keyframes appear {
+    0%{
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes loader {
+    0%{
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
