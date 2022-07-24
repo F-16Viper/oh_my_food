@@ -48,6 +48,7 @@
 }
 .menu {
   background-color: #f6f6f6;
+  padding: 40px 15px;
 }
 .menu h2 {
   margin-bottom: 2rem;
@@ -115,6 +116,10 @@
 }
 .menu .menu__cards .new {
   position: relative;
+  box-shadow: 0 4px 8px #b6b6b6;
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 45px;
 }
 .menu .menu__cards .new::before {
   content: "Nouveau";
@@ -128,6 +133,7 @@
   top: 1rem;
 }
 
+/*
 footer {
   background-color: rgb(62, 61, 61);
   color: white;
@@ -143,6 +149,36 @@ footer a {
 }
 footer p {
   padding: 0.1rem;
+}*/
+
+.footer {
+  padding: 15px 30px 30px 30px;
+  background-color: #333333;
+}
+.footer__titre {
+  font-family: "shrikhand-regular", sans-serif;
+  color: white;
+  font-size: 16px;
+  margin: 0 0 20px 0;
+}
+
+.footer__lien {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-family: "roboto-regular", sans-serif;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.footer__lien i {
+  margin-right: 10px;
+}
+
+.footer__lien p {
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -418,7 +454,8 @@ h2 {
 .Choice h2 {
   padding-left: 25px;
 }
-.Choice ol {
+.Choice ul {
+  list-style-type: none;
   margin-top: 50px;
   display: flex;
   gap: 22px;
